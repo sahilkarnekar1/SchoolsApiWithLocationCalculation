@@ -14,6 +14,8 @@ app.use(bodyParser.json());
 // Use the school routes
 app.use('/api', schoolRoutes);
 
+app.get('/', (req, res) => res.send('API Running'));
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
